@@ -1,40 +1,90 @@
-<p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg" width="400" alt="Statamic Logo" /></p>
+## Hello Tim
 
-## About Statamic
+1. `composer install`
+2. `npm i && npm run build`
 
-Statamic is the flat-first, Laravel + Git powered CMS designed for building beautiful, easy to manage websites.
+If you fill out the form on the homepage quickly and hit submit before the last validation kicks in you'll see the `ERR_CANCELED` thrown. It might help to turn on Throttling in your Dev Tools Network Tab.
 
-> **Note:** This repository contains the code for the Statamic application. To contribute to the core package, visit the [Statamic core package repository][cms-repo].
+If you remove the listerener: `App/Listeners/FormListener.php` this error won't occur and you can submit before any running validation request returns.
 
+Thank you,
 
-## Learning Statamic
+Rob
 
-Statamic has extensive [documentation][docs]. We dedicate a significant amount of time and energy every day to improving them, so if something is unclear, feel free to open issues for anything you find confusing or incomplete. We are happy to consider anything you feel will make the docs and CMS better.
+PS: You can use the following .env for convenience:
 
-## Support
+```
+APP_NAME=Statamic
+APP_ENV=local
+APP_KEY=base64:IZH3zkN1J3dGZ/6WaIhIZ54VXD6f7Enn3QgD3+vOLsI=
+APP_DEBUG=true
+APP_TIMEZONE=UTC
+APP_URL=http://precognition.test
 
-We provide official developer support on [Statamic Pro](https://statamic.com/pricing) projects. Community-driven support is available on the [forum](https://statamic.com/forum) and in [Discord][discord].
+APP_LOCALE=en
+APP_FALLBACK_LOCALE=en
+APP_FAKER_LOCALE=en_US
 
+APP_MAINTENANCE_DRIVER=file
+APP_MAINTENANCE_STORE=file
 
-## Contributing
+BCRYPT_ROUNDS=12
 
-Thank you for considering contributing to Statamic! We simply ask that you review the [contribution guide][contribution] before you open issues or send pull requests.
+LOG_CHANNEL=stack
+LOG_STACK=single
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug
 
+DB_CONNECTION=sqlite
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=precognition
+# DB_USERNAME=root
+# DB_PASSWORD=
 
-## Code of Conduct
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+SESSION_ENCRYPT=false
+SESSION_PATH=/
+SESSION_DOMAIN=null
 
-In order to ensure that the Statamic community is welcoming to all and generally a rad place to belong, please review and abide by the [Code of Conduct](https://github.com/statamic/cms/wiki/Code-of-Conduct).
+BROADCAST_CONNECTION=log
+FILESYSTEM_DISK=local
+QUEUE_CONNECTION=sync
 
+CACHE_STORE=file
+CACHE_PREFIX=
 
-## Important Links
+MEMCACHED_HOST=127.0.0.1
 
-- [Statamic Main Site](https://statamic.com)
-- [Statamic Documentation][docs]
-- [Statamic Core Package Repo][cms-repo]
-- [Statamic Migrator](https://github.com/statamic/migrator)
-- [Statamic Discord][discord]
+REDIS_CLIENT=phpredis
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
 
-[docs]: https://statamic.dev/
-[discord]: https://statamic.com/discord
-[contribution]: https://github.com/statamic/cms/blob/master/CONTRIBUTING.md
-[cms-repo]: https://github.com/statamic/cms
+MAIL_MAILER=log
+MAIL_HOST=127.0.0.1
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
+
+VITE_APP_NAME="${APP_NAME}"
+
+STATAMIC_LICENSE_KEY=
+STATAMIC_PRO_ENABLED=false
+STATAMIC_STACHE_WATCHER=true
+STATAMIC_STATIC_CACHING_STRATEGY=null
+STATAMIC_REVISIONS_ENABLED=false
+STATAMIC_GRAPHQL_ENABLED=false
+STATAMIC_API_ENABLED=false
+STATAMIC_GIT_ENABLED=false
+```
