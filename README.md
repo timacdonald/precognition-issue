@@ -5,7 +5,9 @@
 
 If you fill out the form on the homepage quickly and hit submit before the last validation kicks in you'll see the `ERR_CANCELED` thrown. It might help to turn on Throttling in your Dev Tools Network Tab.
 
-If you remove the listerener: `App/Listeners/FormListener.php` this error won't occur and you can submit before any running validation request returns.
+If you remove the listener: `App/Listeners/FormListener.php` this error won't occur and you can submit before any running validation request returns.
+
+Should you need to log into the CP you can visit http://precognition.test/cp/ and login with `info@studio1902.nl` and `adminadmin`. 
 
 Thank you,
 
