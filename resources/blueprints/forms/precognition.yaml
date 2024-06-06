@@ -1,0 +1,42 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              display: Name
+              type: text
+              validate:
+                - required
+                - 'min:2'
+              localizable: true
+          -
+            handle: email
+            field:
+              display: 'Email address'
+              type: text
+              validate:
+                - required
+                - email
+              localizable: true
+          -
+            handle: select
+            field:
+              options:
+                one: One
+                two: Two
+              type: select
+              display: Select
+              validate:
+                - required
+          -
+            handle: consent
+            field:
+              inline_label: 'I agree that my submitted data is being collected and stored.'
+              display: Consent
+              type: toggle
+              validate:
+                - accepted
